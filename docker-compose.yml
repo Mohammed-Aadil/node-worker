@@ -1,0 +1,31 @@
+version: '2'
+
+## Defining the services for dcker cloud
+services:
+  mongodb:
+    command: mongod --dbpath /apps/lib/mongo-data
+    hostname: mongo
+    image: mongodb/mongodb
+    ports:
+      - "27017:27017"
+    restart: always
+    volumes: 
+      - "./mongo-data:/apps/lib/mongo-data"
+    working_dir: /apps/lib/mongo-data
+  workers:
+    image: node:6.10
+    command: "npm start"
+    ports:
+     - 8888:8888
+    #  - 3000:3000
+    env_file:
+      - .env
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    depends_on: 
+      - mongodb
+    restart: always
+    volumes:
+      - ".:/apps/lib/workers"
+    working_dir: /apps/lib/workers

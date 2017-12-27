@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": false,
+        "noImplicitAny": false,
+        "experimentalDecorators": false,
+        "module": "commonjs",
+        "target": "es5",
+        "rootDir": "src",
+        "outDir": "dist",
+        "removeComments": false
+    },
+    "compileOnSave": true
+}
