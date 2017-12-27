@@ -37,22 +37,6 @@ docker run IMAGE_ID -d
 ## ENV file
 This project have environment variable dependecies.
 ```
-cloudapiSecret=******
-cloudapiKey=******
-cloudName=******
 APP_ROOT_PATH=/apps/lib/workers
 MONGO_DB_URL=mongodb://mongodb/workerDB
-ES_INDEX=******
-ES_SCHEME=http
-ES_HOST=localhost
-ES_PORT=9200
-ES_API_VERSION=2.4
-ES_USER=admin
-ES_PASS=123456
-ES_REQUEST_TIMEOUT=10000
-BNEXT_ADMIN_EMAIL=******
-BNEXT_ADMIN_PASSWORD=******
-BNEXT_SCHEME=http
-BNEXT_HOST=192.168.0.33
-BNEXT_PORT=3000
 ```
